@@ -1,0 +1,22 @@
+{
+  "name": "@idrive-remotepc/decoder-utility",
+  "version": "1.0.0",
+  "description": "Linux utility to decode x265 encoded frames into RGB frames",
+  "main": "release/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/idrive-remotepc/decoder-utility.git"
+  },
+  "keywords": [
+    "x265"
+  ],
+  "author": "RemotePC™ Powered by IDrive Inc. <support@remotepc.com> (https://www.remotepc.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/idrive-remotepc/decoder-utility/issues"
+  },
+  "homepage": "https://github.com/idrive-remotepc/decoder-utility#readme"
+}
