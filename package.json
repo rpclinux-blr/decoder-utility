@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/idrive-remotepc/decoder-utility/issues"
   },
-  "homepage": "https://github.com/idrive-remotepc/decoder-utility#readme"
+  "homepage": "https://github.com/idrive-remotepc/decoder-utility#readme",
+  "dependencies": {
+    "node-addon-api": "^3.0.0"
+  }
 }
