@@ -19,6 +19,7 @@
       },
       "target_name": "decoder-utility",
       "sources": [
+        "native_src/decoder_utility.cc",
         "native_src/decoder.cc"
       ],
       "conditions": [
