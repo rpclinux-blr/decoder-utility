@@ -11,10 +11,17 @@ interface IDecoderUtility {
     /**
      * Initialises the x265 decoder
      */
-    init(width: number, height: number): void;
+    init(): void;
 
     /**
      * Returns the decoded frame buffer as a callback
      */
-    decodeFrame(callback: (nextFrame: ArrayBuffer) => void): void;
+    decodeFrame(encodedFrame: ArrayBuffer, callback: (decodedFrame: IDecodedFrame) => void): void;
+}
+
+export interface IDecodedFrame {
+    height: number;
+    width: number;
+    frame: ArrayBuffer;
+    frameLength: number;
 }
