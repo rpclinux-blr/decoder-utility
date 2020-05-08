@@ -22,6 +22,7 @@ interface IDecoderUtility {
 export interface IDecodedFrame {
     height: number;
     width: number;
-    frame: ArrayBuffer;
-    frameLength: number;
+    yData: ArrayBuffer;
+    uData: ArrayBuffer;
+    vData: ArrayBuffer;
 }

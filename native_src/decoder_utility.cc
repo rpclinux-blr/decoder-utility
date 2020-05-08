@@ -62,8 +62,9 @@ void DecoderUtility::GetNextFrame(const Napi::CallbackInfo &info)
     Napi::Object decodedFrame = Napi::Object::New(env);
     decodedFrame.Set(Napi::String::New(env, "height"), Napi::Number::New(env, frame->height));
     decodedFrame.Set(Napi::String::New(env, "width"), Napi::Number::New(env, frame->width));
-    decodedFrame.Set(Napi::String::New(env, "frame"), Napi::ArrayBuffer::New(env, frame->data, frame->linesize));
-    decodedFrame.Set(Napi::String::New(env, "frameLength"), Napi::Number::New(env, frame->linesize));
+    decodedFrame.Set(Napi::String::New(env, "yData"), Napi::ArrayBuffer::New(env, frame->data[0], frame->linesize[0] * frame->height));
+    decodedFrame.Set(Napi::String::New(env, "uData"), Napi::ArrayBuffer::New(env, frame->data[1], frame->linesize[1] * frame->height / 2));
+    decodedFrame.Set(Napi::String::New(env, "vData"), Napi::ArrayBuffer::New(env, frame->data[2], frame->linesize[2] * frame->height / 2));
 
     cb.Call(env.Global(), {decodedFrame});
 }
