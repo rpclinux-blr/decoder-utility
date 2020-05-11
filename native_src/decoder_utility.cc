@@ -8,7 +8,7 @@ Napi::Object DecoderUtility::Init(Napi::Env env, Napi::Object exports)
     Napi::HandleScope scope(env);
     Napi::Function func = DefineClass(env, "DecoderUtility", {
         InstanceMethod("init", &DecoderUtility::Init), 
-        InstanceMethod("getNextFrame", &DecoderUtility::GetNextFrame),
+        InstanceMethod("decodeFrame", &DecoderUtility::GetNextFrame),
     });
 
     constructor = Napi::Persistent(func);
