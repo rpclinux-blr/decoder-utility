@@ -5,7 +5,7 @@ const addon: any = bindings('decoder-utility');
 
 // Creating and exporting persistent object for screen capture utility
 // tslint:disable-next-line: no-unsafe-any export-name
-export const decoderUtility: IDecoderUtility = new addon.DeecoderUtility();
+export const decoderUtility: IDecoderUtility = new addon.DecoderUtility();
 
 interface IDecoderUtility {
     /**
