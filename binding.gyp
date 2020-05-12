@@ -13,8 +13,8 @@
       ],
       "link_settings": {
         "libraries": [
-          "-l:libavcodec.so.58", # temporarily link dynamically
-          "-l:libavutil.so.56" # temporarily link dynamically
+          "<@(ffmpeg_root)/lib/libavcodec.a", # static library exported with the package
+          "<@(ffmpeg_root)/lib/libavutil.a" # static library exported with the package
         ]
       },
       "target_name": "decoder-utility",
