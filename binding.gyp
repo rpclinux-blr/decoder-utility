@@ -5,8 +5,8 @@
   },
   "targets": [
     { 
-      "cflags!": [ "-fno-exceptions" ],
-      "cflags_cc!": [ "-fno-exceptions" ],
+      "cflags!": [ "-fno-exceptions -fPIC -m64" ],
+      "cflags_cc!": [ "-fno-exceptions -fPIC -m64" ],
       "include_dirs" : [
         "<!@(node -p \"require('node-addon-api').include\")",
         "<@(ffmpeg_root)/include"
