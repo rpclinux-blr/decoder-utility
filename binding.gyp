@@ -5,16 +5,19 @@
   },
   "targets": [
     { 
-      "cflags!": [ "-fno-exceptions -fPIC -m64" ],
-      "cflags_cc!": [ "-fno-exceptions -fPIC -m64" ],
+      "cflags!": [ "-fno-exceptions"],
+      "cflags_cc!": [ "-fno-exceptions"],
       "include_dirs" : [
         "<!@(node -p \"require('node-addon-api').include\")",
         "<@(ffmpeg_root)/include"
       ],
       "link_settings": {
         "libraries": [
-          "<@(ffmpeg_root)/lib/libavcodec.a", # static library exported with the package
-          "<@(ffmpeg_root)/lib/libavutil.a" # static library exported with the package
+          "<@(ffmpeg_root)/lib/libavcodec.so.58.84.100", # static library exported with the package
+          "<@(ffmpeg_root)/lib/libavutil.so.56.45.100" # static library exported with the package
+        ],
+        "ldflags": [
+          "-Wl,-rpath,'$$ORIGIN'"
         ]
       },
       "target_name": "decoder-utility",

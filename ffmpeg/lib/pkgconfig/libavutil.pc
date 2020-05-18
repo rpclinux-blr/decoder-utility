@@ -1,0 +1,14 @@
+prefix=/home/kousik/ffmpeg_build
+exec_prefix=${prefix}
+libdir=/home/kousik/ffmpeg_build/lib
+includedir=/home/kousik/ffmpeg_build/include
+
+Name: libavutil
+Description: FFmpeg utility library
+Version: 56.45.100
+Requires: 
+Requires.private: 
+Conflicts:
+Libs: -L${libdir}  -lavutil 
+Libs.private: -pthread -lm
+Cflags: -I${includedir}

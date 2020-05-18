@@ -134,6 +134,7 @@ typedef struct x265_analysis_validate
     int     ctuDistortionRefine;
     int     rightOffset;
     int     bottomOffset;
+    int     frameDuplication;
 }x265_analysis_validate;
 
 /* Stores intra analysis data for a single frame. This struct needs better packing */
@@ -1258,7 +1259,7 @@ typedef struct x265_param
 
     /* Enable early CU size decisions to avoid recursing to higher depths.
      * Default is enabled */
-    int       enableRecursionSkip;
+    int       recursionSkipMode;
 
     /* Use a faster search method to find the best intra mode. Default is 0 */
     int       bEnableFastIntra;

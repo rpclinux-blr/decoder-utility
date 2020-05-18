@@ -1,0 +1,14 @@
+prefix=/home/kousik/ffmpeg_build
+exec_prefix=${prefix}
+libdir=/home/kousik/ffmpeg_build/lib
+includedir=/home/kousik/ffmpeg_build/include
+
+Name: libavcodec
+Description: FFmpeg codec library
+Version: 58.84.100
+Requires: 
+Requires.private: libavutil >= 56.45.100
+Conflicts:
+Libs: -L${libdir}  -lavcodec 
+Libs.private: -pthread -lm
+Cflags: -I${includedir}
