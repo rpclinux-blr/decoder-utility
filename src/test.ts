@@ -1,6 +1,6 @@
 import { decoderUtility, IDecodedFrame } from './index';
 
-// decoderUtility.init();
+decoderUtility.init();
 
 const encFrame: ArrayBuffer = new Uint8Array(10).buffer;
 
